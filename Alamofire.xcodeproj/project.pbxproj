@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04456BC51B33F2570018E95B /* UIButton+Alamowater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04456BC31B33F2570018E95B /* UIButton+Alamowater.swift */; };
+		04456BC61B33F2570018E95B /* UIImageView+Alamowater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04456BC41B33F2570018E95B /* UIImageView+Alamowater.swift */; };
 		4C256A531B096C770065714F /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C256A501B096C2C0065714F /* BaseTestCase.swift */; };
 		4C256A541B096C770065714F /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C256A501B096C2C0065714F /* BaseTestCase.swift */; };
 		4C341BBA1B1A865A00C1B34D /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C341BB91B1A865A00C1B34D /* CacheTests.swift */; };
@@ -70,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04456BC31B33F2570018E95B /* UIButton+Alamowater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Alamowater.swift"; path = "UIKit/UIButton+Alamowater.swift"; sourceTree = "<group>"; };
+		04456BC41B33F2570018E95B /* UIImageView+Alamowater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Alamowater.swift"; path = "UIKit/UIImageView+Alamowater.swift"; sourceTree = "<group>"; };
 		4C256A501B096C2C0065714F /* BaseTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
 		4C341BB91B1A865A00C1B34D /* CacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
 		4CCFA7991B2BE71600B6F460 /* URLProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLProtocolTests.swift; sourceTree = "<group>"; };
@@ -132,6 +136,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04456BBE1B33F1EF0018E95B /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				04456BC31B33F2570018E95B /* UIButton+Alamowater.swift */,
+				04456BC41B33F2570018E95B /* UIImageView+Alamowater.swift */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
 		4C256A4E1B09656A0065714F /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +214,7 @@
 		F8111E3519A95C8B0040E7D1 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				04456BBE1B33F1EF0018E95B /* UIKit */,
 				F897FF4019AA800700AB5182 /* Alamofire.swift */,
 				4CDE2C481AF8A14A00BABAE5 /* Core */,
 				4CDE2C491AF8A14E00BABAE5 /* Features */,
@@ -428,8 +442,10 @@
 				4CDE2C401AF89E0700BABAE5 /* Upload.swift in Sources */,
 				4CE2724F1AF88FB500F1D59A /* ParameterEncoding.swift in Sources */,
 				4CDE2C3A1AF899EC00BABAE5 /* Request.swift in Sources */,
+				04456BC61B33F2570018E95B /* UIImageView+Alamowater.swift in Sources */,
 				4CDE2C461AF89FF300BABAE5 /* ResponseSerialization.swift in Sources */,
 				4CDE2C371AF8932A00BABAE5 /* Manager.swift in Sources */,
+				04456BC51B33F2570018E95B /* UIButton+Alamowater.swift in Sources */,
 				F897FF4119AA800700AB5182 /* Alamofire.swift in Sources */,
 				4CDE2C3D1AF89D4900BABAE5 /* Download.swift in Sources */,
 				4CDE2C431AF89F0900BABAE5 /* Validation.swift in Sources */,
