@@ -110,7 +110,14 @@ class DetailViewController: UITableViewController {
             return cell
         case .Body:
             let cell = self.tableView.dequeueReusableCellWithIdentifier("Body") as! UITableViewCell
-
+            var button:UIButton = UIButton(frame: CGRect(x: 10, y: 2, width: 100, height: 40))
+            //button .setImageForState(UIControlState.Normal, url: "http://www.lagou.com/image1/M00/25/6F/CgYXBlVRdq2AbGSnAACRFkoAMpQ700.jpg")
+            button.setImageForState(UIControlState.Normal, url: "http://www.lagou.com/image1/M00/25/6F/CgYXBlVRdq2AbGSnAACRFkoAMpQ700.jpg", placeholderImage: UIImage(named: "Logo"), success: { (image) -> Void in
+                print("\(image)")
+            }, failure: { (error) -> Void in
+                print("\(error)")
+            })
+            cell.addSubview(button)
             cell.textLabel?.text = self.body
 
             return cell

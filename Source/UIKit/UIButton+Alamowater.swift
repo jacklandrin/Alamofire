@@ -19,6 +19,9 @@ extension UIButton {
     }
     
     public func setImageForState(state:UIControlState,url:URLStringConvertible,placeholderImage:UIImage?,success:((image:UIImage) -> Void)?,failure:((error:NSError)->Void)?){
+        if placeholderImage != nil {
+            self.setImage(placeholderImage, forState: state)
+        }
         Alamofire.request(.GET,url).response{ (_,_,data,error) -> Void in
             if error == nil {
                 let image = UIImage(data: data! as! NSData)
@@ -47,6 +50,9 @@ extension UIButton {
     }
     
     public func setBackgroundImageForState(state:UIControlState,url:URLStringConvertible,placeholderImage:UIImage?,success:((image:UIImage) -> Void)?,failure:((error:NSError) -> Void)?){
+        if placeholderImage != nil {
+            self.setBackgroundImage(placeholderImage, forState: state)
+        }
         Alamofire.request(.GET,url).response{ (_,_,data,error) -> Void in
             if error == nil {
                 let image = UIImage(data: data! as! NSData)

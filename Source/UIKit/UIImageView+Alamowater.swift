@@ -158,18 +158,17 @@ extension UIImageView {
     */
     public func setImageWithURLRequest(URLString: URLStringConvertible,placeholderImage:UIImage?,success:((image:UIImage)-> Void)?,failure:((error:NSError) -> Void)?){
         cancelImageRequestOperation()
-        println("\(URLString)")
-        let request = NSMutableURLRequest(URL: URLString as! NSURL)
-        request.addValue("image/*", forHTTPHeaderField: "Accept")
-        let cacheImage = UIImageView.sharedImageCache!.cachedImageForRequest(request)
-        if cacheImage != nil {
-            if (success != nil) {
-                success!(image: cacheImage!)
-            } else {
-                image = cacheImage
-            }
-            self.aw_imageRequestOperation = nil
-        } else {
+//        let request = NSMutableURLRequest(URL: URLString as! NSURL)
+//        request.addValue("image/*", forHTTPHeaderField: "Accept")
+//        let cacheImage = UIImageView.sharedImageCache!.cachedImageForRequest(request)
+//        if cacheImage != nil {
+//            if (success != nil) {
+//                success!(image: cacheImage!)
+//            } else {
+//                image = cacheImage
+//            }
+//            self.aw_imageRequestOperation = nil
+//        } else {
             if placeholderImage != nil {
                 self.image = placeholderImage
             }
@@ -183,7 +182,7 @@ extension UIImageView {
                     if success != nil {
                         success!(image:image!)
                     }
-                    UIImageView.sharedImageCache!.cachedImageForRequest(request)
+//                    UIImageView.sharedImageCache!.cachedImageForRequest(request)
                 } else {
                     self.image = placeholderImage
                     if failure != nil {
@@ -192,7 +191,7 @@ extension UIImageView {
                 }
                 
             }
-        }
+//        }
         
         
     }
